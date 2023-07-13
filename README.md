@@ -1,4 +1,4 @@
-# Alpha-Equity-Portfolios
+# Analysis of Alpha Equity Portfolios
 
 ## Weighting “Alpha” equity portfolios
 ### “Alpha ERC” equity portfolio
