@@ -6,8 +6,8 @@ Equal Risk Contribution strategies aim at building balanced portfolios in terms 
 To build the “alpha ERC” equity portfolio, we used the stocks with the best 15 alphas out of the 48 available in the Eurostoxx50 (equivalent to the ones that are above 0.6875 quantile); we determined them by using the following formula and by making the assumption that the error term $𝜀_t$ (which represents the deviation from the best-fitting line) is 0 on average:
 <div style="text-align: center;">
   $α_s  = R_(s,t)  - β_s R_(STOXX50E,t)$<br>
-where R",! and R$%&''()*,! have been calculated taking into account annualized returns,
-whereas 𝛽" calculation was straightforward as we computed the covariance between the stock’s returns and the benchmark, and we divided it by the variance of the benchmark
+where $R_(s,t)$ and $R_(STOXX50E,t)$ have been calculated taking into account annualized returns,
+whereas $β_s$ calculation was straightforward as we computed the covariance between the stock’s returns and the benchmark, and we divided it by the variance of the benchmark
 </div><br>
 Then, we computed the covariance matrix and, by applying the ERC formula (in which positivity and unitary budget constraints are showed) we got the weights for our “alpha ERC” equity portfolio. Moreover, we computed the returns of the portfolio by multiplying these weights with the best 15 alpha stocks’ returns. Regarding the obtained results, what can be said is that: it emerges that the greater the volatility of an asset the lower the weight assigned to that specific asset and the greater the correlation the lower the weight given. In this “alpha ERC” equity portfolio, the stock with the highest weight is Koninklijke Ahold Delhaize N (11.09%), whilst the one with the lowest weight is Volkswagen Ag-pref (4.20%). Furthermore, we wanted to calculate the inverse of the Herfindahl index so as to have the number of effective stocks in which we would invest using this portfolio and the result is 13.81 stocks out of 48.<br><br>
 
