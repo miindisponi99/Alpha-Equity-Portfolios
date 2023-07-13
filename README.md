@@ -5,7 +5,7 @@
 Equal Risk Contribution strategies aim at building balanced portfolios in terms of contribution to risk by the various assets and these lead to portfolios in which less weight is assigned to risky assets. Furthermore, the risk parity strategy does not aim so much to increase the performance in absolute terms (the performance is generally not particularly high) as to improve the behavior of the portfolio in the negative phases of the markets.<br>
 To build the “alpha ERC” equity portfolio, we used the stocks with the best 15 alphas out of the 48 available in the Eurostoxx50 (equivalent to the ones that are above 0.6875 quantile); we determined them by using the following formula and by making the assumption that the error term $𝜀_t$ (which represents the deviation from the best-fitting line) is 0 on average:
 <div style="text-align: center;">
-  $α_s  = R_(s,t)  - β_s R_(STOXX50E,t)$<br>
+  __$α_s  = R_(s,t)  - β_s R_(STOXX50E,t)$<br>__
 where $R_(s,t)$ and $R_(STOXX50E,t)$ have been calculated taking into account annualized returns,
 whereas $β_s$ calculation was straightforward as we computed the covariance between the stock’s returns and the benchmark, and we divided it by the variance of the benchmark
 </div><br>
@@ -16,8 +16,8 @@ In order to have the “alpha CVaR” equity portfolio, we took into considerati
 
 ### Long/Short “alpha” equity portfolio
 To find alphas for the individual stocks of the long/short “alpha” equity portfolio, we made the same calculation as for the other two aforementioned portfolios. However, here we included also the worst 15 alphas as we needed the “short” allocation in the portfolio. Since we wanted to perform the Minimum Volatility portfolio, we computed the covariance matrix for the best and worst 15 alphas and then we utilized an optimizer to minimize the covariance among stocks and find weights for the long portfolio as well as for the short one; these two MV portfolios have been subject to positivity and unitary budget constraints.
-Given the fact that the Long/Short portfolio is determined by:
-__Long/Shortportfolio = a(longportfolio)-b(shortportfolio)__
+Given the fact that the Long/Short portfolio is determined by:<br>
+__Long/Shortportfolio = a(longportfolio)-b(shortportfolio)__<br>
 with a and b determined so that beta of the long and short portfolios to the Eurostoxx50 are equal<br>
 Indeed, to have the “beta neutral” constraint we first computed the covariance of the long and short portfolios’ returns (calculated with the new determined weights) and benchmark returns. Then, for long and short portfolios we calculated beta which are 0.52 and 0.59, respectively. We found the hedge ratio by dividing long portfolio beta and short portfolio beta and this is equal to 0.89 and it is useful to determine the optimal allocation for the long and short portfolios given a leverage of 1 (because we wanted a and b greater than 0 and a+b = 2). It resulted in a long allocation of 105.73%, and 94.27% as a short allocation. Eventually, we adjusted the portfolio’s weights by multiplying them with the allocation based on the leverage, and we also found Long/Short “alpha” equity portfolio returns.<br>
 Here, the stock with the highest weight is Danone (20.54%) and the one with the lowest one is ASML Holding NV (5.01522e-19).<br>
