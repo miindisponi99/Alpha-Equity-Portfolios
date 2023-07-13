@@ -5,7 +5,7 @@
 Equal Risk Contribution strategies aim at building balanced portfolios in terms of contribution to risk by the various assets and these lead to portfolios in which less weight is assigned to risky assets. Furthermore, the risk parity strategy does not aim so much to increase the performance in absolute terms (the performance is generally not particularly high) as to improve the behavior of the portfolio in the negative phases of the markets.<br>
 To build the “alpha ERC” equity portfolio, we used the stocks with the best 15 alphas out of the 48 available in the Eurostoxx50 (equivalent to the ones that are above 0.6875 quantile); we determined them by using the following formula and by making the assumption that the error term $𝜀_t$ (which represents the deviation from the best-fitting line) is 0 on average:
 <div style="text-align: center;">
-  $α_s = R_{s,t} - β_s R_{STOXX50E,t}$<br>
+  $α_s  = R_(s,t)  - β_s R_(STOXX50E,t)$<br>
 where R",! and R$%&''()*,! have been calculated taking into account annualized returns,
 whereas 𝛽" calculation was straightforward as we computed the covariance between the stock’s returns and the benchmark, and we divided it by the variance of the benchmark
 </div><br>
